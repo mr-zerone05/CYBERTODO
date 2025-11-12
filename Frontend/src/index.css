@@ -1,0 +1,124 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "./styles/custom-theme.css";
+
+@custom-variant dark (&:is(.dark *));
+@config "../tailwind.config.js";
+
+@layer base {
+  :root {
+    /* Green theme (from provided palette) - values are H S% L% for Tailwind's hsl(var(--...)) usage */
+    --background: 0 0% 1%;            /* #020202 */
+    --background-secondary: 144 51% 10%; /* #0D2818 */
+    --foreground: 0 0% 100%;
+
+    --card: 144 51% 10%;              /* #0D2818 */
+    --card-foreground: 0 0% 100%;     /* white text on dark card */
+    --card-shadow: 144 82% 17%;
+
+    --popover: 144 51% 10%;
+    --popover-foreground: 0 0% 100%;
+
+    /* Primary and accents mapped to Pakistan -> Shamrock -> Malachite */
+    --primary: 142 89% 15%;           /* #04471C */
+    --primary-light: 147 88% 31%;     /* #0A9548 */
+    --primary-dark: 142 89% 12%;      /* darker primary */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 142 89% 15%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 144 51% 10%;
+    --muted-foreground: 0 0% 70%;     /* muted text */
+
+    --accent: 147 88% 31%;            /* #0A9548 */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --success: 144 82% 47%;          /* #16DB65 */
+    --success-foreground: 0 0% 10%;
+
+    --info: 144 82% 47%;
+
+    --border: 147 88% 12%;
+    --input: 144 51% 10%;
+    --ring: 147 88% 31%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(142 89% 15%) 0%, hsl(147 88% 31%) 100%);
+    --gradient-background: linear-gradient(135deg, hsl(0 0% 1%) 0%, hsl(144 51% 10%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(144 51% 10%) 0%, hsl(142 89% 15%) 100%);
+
+    /* Shadows tuned for dark green theme */
+    --shadow-sm: 0 1px 2px 0 hsl(142 89% 15% / 0.06);
+    --shadow-md: 0 6px 12px -4px hsl(142 89% 15% / 0.18);
+    --shadow-lg: 0 10px 30px -6px hsl(142 89% 15% / 0.22);
+    --shadow-glow: 0 0 30px hsl(147 88% 31% / 0.12);
+
+    /* Transitions */
+    --transition-smooth: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 144 51% 10%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 142 89% 15%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 147 88% 31%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 142 89% 12%;
+    --sidebar-ring: 147 88% 31%;
+  }
+
+  /* dark class kept to allow explicit .dark if needed, map to same green theme values */
+  .dark {
+    --background: 0 0% 1%;
+    --foreground: 0 0% 100%;
+
+    --card: 144 51% 10%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 144 51% 10%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 142 89% 15%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 142 89% 15%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 144 51% 10%;
+    --muted-foreground: 0 0% 70%;
+
+    --accent: 147 88% 31%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 142 89% 12%;
+    --input: 144 51% 10%;
+    --ring: 147 88% 31%;
+    --sidebar-background: 144 51% 10%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 142 89% 15%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 147 88% 31%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 142 89% 12%;
+    --sidebar-ring: 147 88% 31%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}

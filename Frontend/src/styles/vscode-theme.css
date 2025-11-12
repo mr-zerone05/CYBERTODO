@@ -1,0 +1,71 @@
+:root {
+  /* VS Code Green Theme Colors */
+  --vscode-bg: #1E1E1E;
+  --vscode-fg: #D4D4D4;
+  --vscode-green: #238636;
+  --vscode-green-light: #2EA043;
+  --vscode-green-bright: #3FB950;
+  --vscode-border: #30363D;
+  --vscode-selection: #264F78;
+  --vscode-button-bg: #238636;
+  --vscode-button-hover: #2EA043;
+  --vscode-menu-bg: #1E1E1E;
+  --vscode-menu-border: #30363D;
+  --vscode-input-bg: #0D1117;
+  --vscode-input-border: #30363D;
+  --vscode-input-focused-border: #388BFD;
+  --vscode-scrollbar-thumb: #424242;
+  --vscode-scrollbar-hover: #4F4F4F;
+}
+
+/* Apply VS Code-like styling */
+.vscode-theme {
+  background-color: var(--vscode-bg);
+  color: var(--vscode-fg);
+}
+
+/* Custom button styling */
+.vscode-button {
+  background-color: var(--vscode-button-bg);
+  color: white;
+  border: 1px solid transparent;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.vscode-button:hover {
+  background-color: var(--vscode-button-hover);
+}
+
+/* Custom input styling */
+.vscode-input {
+  background-color: var(--vscode-input-bg);
+  border: 1px solid var(--vscode-input-border);
+  color: var(--vscode-fg);
+  border-radius: 4px;
+  padding: 4px 8px;
+}
+
+.vscode-input:focus {
+  border-color: var(--vscode-input-focused-border);
+  outline: none;
+}
+
+/* Card styling */
+.vscode-card {
+  background-color: var(--vscode-bg);
+  border: 1px solid var(--vscode-border);
+  border-radius: 6px;
+}
+
+/* List item styling */
+.vscode-list-item {
+  border-bottom: 1px solid var(--vscode-border);
+  padding: 8px;
+}
+
+.vscode-list-item:hover {
+  background-color: var(--vscode-selection);
+}

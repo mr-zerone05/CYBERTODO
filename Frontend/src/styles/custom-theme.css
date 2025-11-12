@@ -1,0 +1,81 @@
+:root {
+  /* Custom Green Theme Colors */
+  --theme-bg-dark: #020202;
+  --theme-bg-card: #0D2818;
+  --theme-primary: #04471C;
+  --theme-accent: #0A9548;
+  --theme-highlight: #16DB65;
+  
+  /* Text colors */
+  --theme-text-primary: #ffffff;
+  --theme-text-secondary: rgba(255, 255, 255, 0.7);
+  --theme-text-muted: rgba(255, 255, 255, 0.5);
+  
+  /* Border colors */
+  --theme-border: rgba(10, 149, 72, 0.3);
+  --theme-border-light: rgba(22, 219, 101, 0.2);
+  
+  /* Gradient */
+  --theme-gradient: linear-gradient(
+    135deg,
+    var(--theme-primary) 0%,
+    var(--theme-accent) 100%
+  );
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: var(--theme-bg-card);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--theme-primary);
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--theme-accent);
+}
+
+/* Application semantic helpers */
+.app-title {
+  color: var(--theme-text-primary);
+  font-weight: 700;
+}
+
+.card-title {
+  color: var(--theme-text-primary);
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background: var(--theme-primary);
+  color: var(--theme-text-primary);
+  border: 1px solid rgba(255,255,255,0.04);
+  padding: 0.45rem 0.9rem;
+  border-radius: 0.5rem;
+}
+
+.btn-primary:hover {
+  background: var(--theme-accent);
+}
+
+.badge-accent {
+  background: linear-gradient(90deg, var(--theme-primary), var(--theme-accent));
+  color: var(--theme-text-primary);
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  font-weight: 600;
+}
+
+.card {
+  background: var(--theme-bg-card);
+  border: 1px solid var(--theme-border);
+  color: var(--theme-text-primary);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
